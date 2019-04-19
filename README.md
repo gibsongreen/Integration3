@@ -1,5 +1,4 @@
-# Integration3
-# Integration2# (Files for grading are in the file labeled: Hackerrank & ReturnAValue file)
+# Integration3 (Hackerrank file contains main method)
 PSI 1
 Add your name as a comment at top of every file
 Add a description of the program as a comment at top
