@@ -7,16 +7,18 @@ import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
-/**
- * @author gibso This Program was written by Gibson Green The following program is an integration of
- *         skills that have been learned through April 18, 2019 (Introduction to Programming) Topics
- *         covered include: primitive data types, strings, string concatenation, casting data types,
- *         escape sequences, methods variables, for loops, while loops (& do-while), the Math class,
- *         the Random class,) inheritance, polymorphism, arrays, ArrayLists, 2D-Arrays, searching
+/** Main Method Program.
+ * @author gibso This Program was written by Gibson Green The following program is an integration.
+ *         of skills that have been learned through April 18, 2019 (Introduction to Programming)
+ *         Topics covered include: primitive data types, strings, string concatenation, casting
+ *         types, escape sequences, methods variables, for loops, while loops (& do-while), the
+ *         Random class,) inheritance, polymorphism, arrays, ArrayLists, 2D-Arrays, searching
  *         arrays)
- *
  */
 public class HackerRank {
+  /** args this is the main method.
+   * @param args this is the main method.
+   */
   public static void main(String[] args) {
     System.out.println("Hello, friend!\n");
     Scanner scan = new Scanner(System.in);
@@ -25,7 +27,7 @@ public class HackerRank {
     while (reenterProgram) {
 
       System.out.println("The following are menu options for my Integration Project."
-          + " Enter an integer from 1-16 to go to the specified area:");
+          + " Enter an integer from 1-17 to go to the specified area:");
       System.out.println("1. Math Operations");
       System.out.println("2. Data Types, Using Data Types, Variable, and Scope");
       System.out.println("3. Returning a Value, THE Ternary Operator, Method Call & Arguments");
@@ -42,7 +44,8 @@ public class HackerRank {
       System.out.println("14. Array Sum, Enhanced For Loop, 2D Array");
       System.out.println("15. Array: Find Index, Find Min., Find Length");
       System.out.println("16. Bulls player 2D array search");
-      System.out.println("Make your number selection between 1-16 here: ");
+      System.out.println("17. AppleProduct Polymorphism Example");
+      System.out.println("Make your number selection between 1-17 here: ");
 
 
       // initializes variable for user input to 0
@@ -63,9 +66,9 @@ public class HackerRank {
           System.out.println("Bad choice");
         }
         if (choice == 1 || choice == 2 || choice == 3 || choice == 4 || choice == 5 || choice == 6
-            || choice == 6 || choice == 7 || choice == 8 || choice == 9 || choice == 10
-            || choice == 11 || choice == 12 || choice == 13 || choice == 14 || choice == 15
-            || choice == 16) {
+            || choice == 7 || choice == 8 || choice == 9 || choice == 10 || choice == 11
+            || choice == 12 || choice == 13 || choice == 14 || choice == 15 || choice == 16 ||
+            choice == 17) {
           badInputSelection = false;
           System.out.println("Good choice");
         } else {
@@ -75,30 +78,29 @@ public class HackerRank {
       switch (choice) {
         case 1:
           // Using math operators +,-,*,/,%,++,--,+=
-          double x = 10;
-          double y = 5;
-          double w = 3;
+          final double xValue = 10;
+          final double yValue = 5;
+          final double wValue = 3;
           double v = 1;
           double u = 1;
           double g = 1;
 
-          double z = x + y;
-          double a = x - y;
-          double b = x * y;
-          double c = x / y;
-          double d = x % w;
-          double e = ++v;
-          double f = --u;
+          final double zValue = xValue + yValue;
+          final double aValue = xValue - yValue;
+          final double bValue = xValue * yValue;
+          final double cValue = xValue / yValue;
+          final double dValue = xValue % wValue;
+          final double eValue = ++v;
+          final double fValue = --u;
           g += 1;
-
-          System.out.println("using + operator, adding 5 + 10 = " + z);
-          System.out.println("using - operator, subtracting 5 - 10 = " + a);
-          System.out.println("using * operator, multiplying 5 * 10 = " + b);
-          System.out.println("using / operator, dividing 5 / 10 = " + c + " be careful!"
+          System.out.println("using + operator, adding 5 + 10 = " + zValue);
+          System.out.println("using - operator, subtracting 5 - 10 = " + aValue);
+          System.out.println("using * operator, multiplying 5 * 10 = " + bValue);
+          System.out.println("using / operator, dividing 5 / 10 = " + cValue + " be careful!"
               + "values can be truncated depending on variable type and remainders.");
-          System.out.println("using % operator, dividing 10 by 3, the remainder is = " + d);
-          System.out.println("using ++ operator, adding 1 to v = " + e);
-          System.out.println("using -- operator, subtracting 1 from u = " + f);
+          System.out.println("using % operator, dividing 10 by 3, the remainder is = " + dValue);
+          System.out.println("using ++ operator, adding 1 to v = " + eValue);
+          System.out.println("using -- operator, subtracting 1 from u = " + fValue);
           System.out.println("using += operator, adding 1 to g = " + g);
 
           break;
@@ -118,47 +120,65 @@ public class HackerRank {
           System.out
               .println("short:  The short data type is a 16-bit signed two's complement integer.\n"
                   + "It has a minimum value of -32,768 and a maximum value of 32,767 (inclusive).\n"
-                  + "As with byte, the same guidelines apply: you can use a short to save memory in\n"
+                  + "As with byte, the same guidelines apply: you can use a short to save memory"
+                  + " in\n"
                   + "large arrays, in situations where the memory savings actually matters.\n");
           System.out
               .println("int:By default, the int data type is a 32-bit signed two's complement\n"
                   + "integer, which has a minimum value of -231 and a maximum value of 231-1.\n"
-                  + "In Java SE 8 and later, you can use the int data type to represent an unsigned\n"
+                  + "In Java SE 8 and later, you can use the int data type to represent an "
+                  + "unsigned\n"
                   + "32-bit integer, which has a minimum value of 0 and a maximum value of 232-1.\n"
                   + "Use the Integer class to use int data type as an unsigned integer.\n"
                   + "See the section The Number Classes for more information. Static methods\n"
-                  + "like compareUnsigned, divideUnsigned etc have been added to the Integer class\n"
-                  + "to support the arithmetic operations for unsigned integers.\n");
+                  + "like compareUnsigned, divideUnsigned etc have been added to the Integer"
+                  + " class\n" + "to support the arithmetic operations for unsigned integers.\n");
           System.out
               .println("long: The long data type is a 64-bit two's complement integer. The signed\n"
                   + "long has a minimum value of -263 and a maximum value of 263-1. In Java SE 8\n"
-                  + "and later, you can use the long data type to represent an unsigned 64-bit long,\n"
-                  + "which has a minimum value of 0 and a maximum value of 264-1. Use this data type\n"
-                  + "when you need a range of values wider than those provided by int. The Long class\n"
-                  + "also contains methods like compareUnsigned, divideUnsigned etc to support arithmetic\n"
-                  + "operations for unsigned long.\n");
+                  + "and later, you can use the long data type to represent an unsigned 64-bit "
+                  + "long,\n"
+                  + "which has a minimum value of 0 and a maximum value of 264-1. Use this data"
+                  + " type\n"
+                  + "when you need a range of values wider than those provided by int. The Long "
+                  + "class\n"
+                  + "also contains methods like compareUnsigned, divideUnsigned etc to support"
+                  + " arithmetic\n" + "operations for unsigned long.\n");
           System.out
               .println("float: The float data type is a single-precision 32-bit IEEE 754 floating\n"
-                  + "point. Its range of values is beyond the scope of this discussion, but is specified\n"
-                  + "in the Floating-Point Types, Formats, and Values section of the Java Language\n"
+                  + "point. Its range of values is beyond the scope of this discussion, but is "
+                  + "specified\n"
+                  + "in the Floating-Point Types, Formats, and Values section of the Java "
+                  + "Language\n"
                   + "Specification. As with the recommendations for byte and short, use a float\n"
-                  + "(instead of double) if you need to save memory in large arrays of floating point\n"
-                  + "numbers. This data type should never be used for precise values, such as currency.\n"
-                  + "For that, you will need to use the java.math.BigDecimal class instead. Numbers\n"
-                  + "and Strings covers BigDecimal and other useful classes provided by the Java platform.\n");
+                  + "(instead of double) if you need to save memory in large arrays of"
+                  + " floating point\n"
+                  + "numbers. This data type should never be used for precise values, such as"
+                  + " currency.\n"
+                  + "For that, you will need to use the java.math.BigDecimal class instead"
+                  + ". Numbers\n"
+                  + "and Strings covers BigDecimal and other useful classes provided by the"
+                  + " Java platform.\n");
           System.out.println(
               "double: The double data type is a double-precision 64-bit IEEE 754 floating point.\n"
-                  + "Its range of values is beyond the scope of this discussion, but is specified in the\n"
-                  + "Floating-Point Types, Formats, and Values section of the Java Language Specification.\n"
-                  + "For decimal values, this data type is generally the default choice. As mentioned\n"
-                  + "above, this data type should never be used for precise values, such as currency.\n");
+                  + "Its range of values is beyond the scope of this discussion, but is specified"
+                  + " in the\n"
+                  + "Floating-Point Types, Formats, and Values section of the Java Language "
+                  + "Specification.\n"
+                  + "For decimal values, this data type is generally the default choice."
+                  + " As mentioned\n"
+                  + "above, this data type should never be used for precise values, such as"
+                  + " currency.\n");
           System.out.println(
               "boolean: The boolean data type has only two possible values: true and false.\n"
-                  + "Use this data type for simple flags that track true/false conditions. This data type\n"
-                  + "represents one bit of information, but its \"size\" isn't something that's precisely defined.\n");
+                  + "Use this data type for simple flags that track true/false conditions."
+                  + " This data type\n"
+                  + "represents one bit of information, but its \"size\" isn't something "
+                  + "that's precisely defined.\n");
           System.out.println(
               "char: The char data type is a single 16-bit Unicode character. It has a minimum\n"
-                  + "value of '\\u0000' (or 0) and a maximum value of '\\uffff' (or 65,535 inclusive).\n");
+                  + "value of '\\u0000' (or 0) and a maximum value of '\\uffff' "
+                  + "(or 65,535 inclusive).\n");
           System.out.println(
               "Source for Data Types: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html");
 
@@ -231,12 +251,12 @@ public class HackerRank {
           int i = 1;
           while (++i <= 5) { // <= is a relation operator
             System.out.print(i);
-            if (i == 4)
-              break; // when break statement is executed inside loop, loop statement
-            // terminates immediately, program continues to execute with the statement following
-            // the loop statement
-            // in this case, i is initialized at 1, pre-incremented by 1; i is compared to 4
-            // once the i value reaches 4, the loop terminates immediately
+            break; // when break statement is executed inside loop, loop statement
+            /*
+             * terminates immediately, program continues to execute with the statement following //
+             * the loop statement // in this case, i is initialized at 1, pre-incremented by 1; i is
+             * compared to 4 once the i value reaches 4, the loop terminates immediately
+             */
           }
 
           // the follow print line separates the while and for loop lines
@@ -251,13 +271,13 @@ public class HackerRank {
           // pass through the for loop
           // for loop prints the value of i every pass through the loop until i = 5
           for (i = 1; i <= 5; i++) {
-            if (i == 4)
+            if (i == 4) {
+              System.out.print(i);
               continue; // when continue statement is executed inside loop, skips
-            // iteration in a loop, it doesn't terminate the loop itself
-            // in this case, continue statement to skip over the iteration of i = 4, and then
-            // continue to the rest of the loop
-            System.out.print(i);
-
+              // iteration in a loop, it doesn't terminate the loop itself
+              // in this case, continue statement to skip over the iteration of i = 4, and then
+              // continue to the rest of the loop
+            }
           }
           break;
 
@@ -356,15 +376,15 @@ public class HackerRank {
           int date = 5;
           int month = 2;
           int year = 1999;
-          if ((date == 5) && (month == 2) || (year == 1999))
+          if ((date == 5) && (month == 2) || (year == 1999)) {
             System.out.println(month + "/" + date + "/" + year + " is my date of birth.");
+          }
           break;
 
         case 13:
           Person carlos = new Person("Carlos", 7);
           carlos.speak();
           Person albert = new Person();
-          Person benj = new Person("Benjamin Button", 10, false);
           Male jake = new Male("Jake", 17, true);
           // In the line above, an object named jake being an instance of the class of Male
           // displays the qualities of inheritance, if you take a look at the Person class and
@@ -381,7 +401,7 @@ public class HackerRank {
           // speak method and is the one that is printed to the console
           albert.setAge(4);
           albert.setName("Albert");
-
+          Person benj = new Person("Benjamin Button", 10, false);
           System.out.println("Hello, my name is " + carlos.name + " and I am " + carlos.age
               + " years old. True or False, I was born as an infant? ");
           System.out.println("Hello, my name is " + albert.name + " and I am " + albert.age
@@ -395,12 +415,12 @@ public class HackerRank {
             System.out.println("index " + boy[i1]);
           }
 
-          ArrayList<String> favoriteNBAPlayers = new ArrayList<String>();
-          favoriteNBAPlayers.add("Giannis");
-          favoriteNBAPlayers.add("Fred");
-          favoriteNBAPlayers.add("Alan");
-          favoriteNBAPlayers.add("Winifred");
-          System.out.println(favoriteNBAPlayers);
+          ArrayList<String> favoriteNbaPlayers = new ArrayList<String>();
+          favoriteNbaPlayers.add("Giannis");
+          favoriteNbaPlayers.add("Fred");
+          favoriteNbaPlayers.add("Alan");
+          favoriteNbaPlayers.add("Winifred");
+          System.out.println(favoriteNbaPlayers);
           break;
 
         case 14:
@@ -456,23 +476,23 @@ public class HackerRank {
           break;
 
         case 15:
-          int[] birthday_Array = new int[6];
-          birthday_Array[0] = 2;
-          birthday_Array[0] = 5;
-          birthday_Array[0] = 1999;
-          birthday_Array[0] = 3;
-          birthday_Array[0] = 26;
-          birthday_Array[0] = 1999;
+          int[] birthdayArray = new int[6];
+          birthdayArray[0] = 2;
+          birthdayArray[0] = 5;
+          birthdayArray[0] = 1999;
+          birthdayArray[0] = 3;
+          birthdayArray[0] = 26;
+          birthdayArray[0] = 1999;
           // This output uses the array birthday_array and calls the class method, findIndex
           // to find the index of the element that is given (in this case 3)
           // the next output finds the minimum value of birthday_array by calling the
           // OneDArray class method getMin
           // the next output prints the length of birthday_array
           System.out.println("The array index at value 3 of birthday_array is "
-              + OneDArray.findIndex(birthday_Array, 3));
+              + OneDArray.findIndex(birthdayArray, 3));
           System.out.println(
-              "The minimum value in birthday_array is: " + OneDArray.getMin(birthday_Array));
-          System.out.println("The length of birthday_array is " + birthday_Array.length);
+              "The minimum value in birthday_array is: " + OneDArray.getMin(birthdayArray));
+          System.out.println("The length of birthday_array is " + birthdayArray.length);
           break;
 
         case 16:
@@ -489,6 +509,39 @@ public class HackerRank {
               } // add comments to these to figure out which braces apply to which one
             }
           }
+          break;
+          
+        case 17 :
+          AppleProducts iPhone1 = new AppleProducts();
+          iPhone1.communicate();
+          iPhone1.showProductType();
+          iPhone1.setCharging(true);
+          System.out.println();
+          
+          iPhone iPhone2 = new iPhone();
+          iPhone2.communicate();
+          iPhone2.showProductType();
+          System.out.println();
+          
+          AppleWatch appleWatch1 = new AppleWatch();
+          appleWatch1.communicate();
+          appleWatch1.takeEKG();
+          appleWatch1.showProductType();
+          System.out.println();
+          
+          MacBook macBook1 = new MacBook();
+          macBook1.communicate();
+          macBook1.showProductType();
+          System.out.println();
+          
+          AppleProducts[] myAppleProducts = { iPhone1, iPhone2, appleWatch1, macBook1 };
+          for (AppleProducts heresAFew : myAppleProducts)
+          {
+            heresAFew.communicate();
+          }   
+                  
+        default:
+          System.out.println("This is a default case");
       }
       // the following try/catch along with if statement allows the user to reenter the overall
       // program through user input, enter 0 for reenter and 1 to exit.
@@ -510,5 +563,6 @@ public class HackerRank {
         System.out.println("The program is terminated.");
       } // if (choice == 1)
     } // while (reenterProgram)
+    scan.close();
   } // this is the main method curly brace
 }
